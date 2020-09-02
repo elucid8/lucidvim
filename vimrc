@@ -24,7 +24,7 @@ set directory=$HOME/.vim/tmp/
 set encoding=utf-8 "defaults to unicode
 set expandtab "turns tab key into shortcut for multiple spaces
 set fileencoding=utf-8
-set fileformat=unix "sets end-of-line to unix <NL>
+set fileformat=unix "sets end-of-line to unix newline character
 set foldcolumn=0 "set folding column width
 set foldenable "enable code folding
 set foldlevelstart=10 "leaves most folds open at start
@@ -55,7 +55,7 @@ set relativenumber "displays distance of lines from cursor
 set ruler "displays current line number in status column
 set scrolloff=7 "determines number of context lines above and below cursor
 set shiftwidth=2 "number of spaces for each step of autoindent
-set showbreak=> "shows line continuation
+set showbreak=">" "shows line continuation
 set showtabline=1 "shows tabline
 set showmatch "highlight matching for brackets, braces, and parenthesis
 set smartcase " become case-sensitive when pattern contains an upper case
@@ -78,10 +78,23 @@ syntax on "keeps your current color settings
 color dracula
 
 "" Keybindings
-"allow spaces to be inserted in normal mode
-nnoremap <Space> i<Space><esc>
 "allow backspace to work in normal mode like it does in insert mode
 nnoremap <BS> i<BS><esc>l
+let mapleader = (" ")
+
+nnoremap <leader>f :Vex<CR> 
+nnoremap <leader>n :ene<CR> 
+nnoremap <leader>v :vnew<CR> 
+nnoremap <leader>s :new<CR> 
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>H :wincmd H<CR>
+nnoremap <leader>J :wincmd J<CR>
+nnoremap <leader>K :wincmd K<CR>
+nnoremap <leader>L :wincmd L<CR>
+nnoremap <leader>b :ls<CR>
 
 """statusbar"""
 
