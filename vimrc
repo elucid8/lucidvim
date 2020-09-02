@@ -1,3 +1,7 @@
+"====================="
+" LucidVim v0.2-alpha "
+"====================="
+
 "" Displays cursorline and cursorcolumn
 augroup CursorLine
   au!
@@ -48,7 +52,7 @@ set omnifunc=syntaxcomplete#Complete "enable omni syntax completion
 set relativenumber "displays distance of lines from cursor
 set ruler "displays current line number in status column
 set scrolloff=7 "determines number of context lines above and below cursor
-set shiftwidth=2 "number off spaces for each step of autoindent
+set shiftwidth=2 "number of spaces for each step of autoindent
 set showbreak=> "shows line continuation
 set showtabline=1 "shows tabline
 set showmatch "highlight matching for brackets, braces, and parenthesis
@@ -69,7 +73,7 @@ set wildmenu "creates autocomplete graphical menu
 set wildmode=full "for use with wildmenu
 set writebackup "creates a backup before overwriting current buffer
 syntax on "keeps your current color settings
-color dracula 
+color dracula
 
 "" Keybindings
 "allow spaces to be inserted in normal mode
@@ -77,8 +81,9 @@ nnoremap <Space> i<Space><esc>
 "allow backspace to work in normal mode like it does in insert mode
 nnoremap <BS> i<BS><esc>l
 
-"LucidStatus - A modern, elegant statusbar
+"""statusbar"""
 
+"For displaying mode title when mode keys are pressed
 let g:currentmode={
   \ 'n'  : 'NORMAL',
   \ 'i'  : 'INSERT',
@@ -86,13 +91,17 @@ let g:currentmode={
   \ 'v'  : 'VISUAL',
   \ 'V'  : 'V-LINE',
   \ '' : 'V-BLOCK',
+  \ 'c'  : 'Command',
   \}
-  exe 'hi! StatusLine guibg=Green4'
+"Colors the statusline to Normal mode coloring when vim opens
+ " exe 'hi! StatusLine guibg=Green4'
 
+"Changes color of statusline based on the mode
 function! ChangeColor()
-  if (mode() =~# '\v(n|no)')
+  mode()=n
+  if (mode() ==# 'n')
     exe 'hi! StatusLine guibg=Green4'
-  elseif (mode() =~# '\v(v|V)' || g:currentmode[mode()] ==# 'V-BLOCK' || get(g:currentmode, mode(), '') ==# 't')
+  elseif (mode() ==# 'v')
     exe 'hi! StatusLine guibg=Purple4'
   elseif (mode() ==# 'i')
     exe 'hi! StatusLine guibg=Blue3'
@@ -104,15 +113,15 @@ function! ChangeColor()
   return ''
 endfunction
 
-set statusline=
-set statusline+=%{ChangeColor()}
-set statusline+=%*\ %{toupper(g:currentmode[mode()])}
-set statusline+=\ \|
-set statusline+=\ buf:%n
-set statusline+=\ \|
-set statusline+=\ %f\ %m
-set statusline+=\ \|
-set statusline+=%=
-set statusline+=\ \|
-set statusline+=\ %p%%
-set statusline+=\  
+"Statusline components
+set statusline= "Initializes statusline
+set statusline+=\ %{g:currentmode[mode()]} "Mode name indicator
+"set statusline+=%{ChangeColor()} "Color changing function
+set statusline+=\ \| "Separator
+"set statusline+=\ %n\:%{bufnr('$')}  "Buffer 
+set statusline+=\ \| "Separator
+set statusline+=\ %f\ %m "Filename and modified indicator
+set statusline+=\ \| "Separator
+set statusline+=%= "Spacer
+set statusline+=\ \| "Separator
+set statusline+=\ %p%% "Percent of file scrolled
