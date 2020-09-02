@@ -16,6 +16,7 @@ set autoread "autoreads file when externally changed
 set backspace=indent,eol,start "backspace works like expected
 set background=dark
 set browsedir=$HOME/ "sets filebrowser to open on home
+set buftype="" "allows writing buffer after modification
 set cmdheight=1 "command height
 set cmdwinheight=1 "command window height
 set colorcolumn=79,80 "marks column 79 and 80
@@ -38,6 +39,7 @@ set laststatus=2 "always display the status line
 set lazyredraw "redraws screen only when necessary
 set magic "search mode cross-compatability
 set matchtime=2 "time in tenths of second to display showmatch
+set modifiable "makes buffers modifiable
 set mouse="" "disable mouse. vim is keyboard driven
 set noerrorbells "turn off annoyances
 set nolinebreak "prevents line breaks
@@ -98,12 +100,11 @@ let g:currentmode={
 
 "Changes color of statusline based on the mode
 function! ChangeColor()
-  mode()=n
   if (mode() ==# 'n')
     exe 'hi! StatusLine guibg=Green4'
-  elseif (mode() ==# 'v')
+  elseif (mode() =~? '[vV]')
     exe 'hi! StatusLine guibg=Purple4'
-  elseif (mode() ==# 'i')
+  elseif (mode() =~? '[iIaAoO]')
     exe 'hi! StatusLine guibg=Blue3'
   elseif (mode() ==# 'R')
     exe 'hi! StatusLine guibg=Red4'
@@ -114,14 +115,38 @@ function! ChangeColor()
 endfunction
 
 "Statusline components
-set statusline= "Initializes statusline
+set statusline= "Sets default statusline
 set statusline+=\ %{g:currentmode[mode()]} "Mode name indicator
-"set statusline+=%{ChangeColor()} "Color changing function
+set statusline+=%{ChangeColor()} "Color changing function
 set statusline+=\ \| "Separator
 set statusline+=\ %n\:%{len(filter(range(1,bufnr('$')),'buflisted(v:val)'))}  "Buffer 
 set statusline+=\ \| "Separator
-set statusline+=\ %f\ %m "Filename and modified indicator
+set statusline+=\ %f%m "Filename and modified indicator
 set statusline+=\ \| "Separator
 set statusline+=%= "Spacer
 set statusline+=\ \| "Separator
-set statusline+=\ %p%% "Percent of file scrolled
+set statusline+=\ %p%%\  "Percent of file scrolled
+
+"""Netrw"""
+let g:netrw_banner = 0
+let g:netrw_browse_split = 0
+let g:netrw_liststyle = 1
+let g:netrw_winsize = 25
+
+"Netrw mappings and statusline
+augroup netrw_map
+  autocmd!
+  autocmd filetype netrw call NetrwMap()
+  autocmd filetype netrw setlocal statusline=\  
+augroup END
+
+function! NetrwMap()
+  nnoremap <buffer> ~ :edit ~/<CR>
+endfunction
+
+"Help
+augroup helpsettings
+  autocmd!
+  autocmd filetype help | wincmd L | wincmd =
+  autocmd filetype help setlocal statusline=\ 
+augroup END
