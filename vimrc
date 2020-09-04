@@ -5,7 +5,7 @@
 "" Displays cursorline and cursorcolumn
 augroup CursorLine
   au!
-  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline cursorcolumn 
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline cursorcolumn
   au WinLeave * setlocal nocursorline nocursorcolumn
 augroup END
 
@@ -106,23 +106,24 @@ let g:currentmode={
   \ 'v'  : 'VISUAL',
   \ 'V'  : 'V-LINE',
   \ '' : 'V-BLOCK',
-  \ 'c'  : 'Command',
   \}
-"Colors the statusline to Normal mode coloring when vim opens
- " exe 'hi! StatusLine guibg=Green4'
-
 "Changes color of statusline based on the mode
 function! ChangeColor()
+  let normalColor = 'hi! StatusLine guibg=Green4'
+  let insertColor = 'hi! StatusLine guibg=Blue3'
+  let replaceColor = 'hi! StatusLine guibg=Red4'
+  let visualColor = 'hi! StatusLine guibg=Purple4'
+  exe normalColor
   if (mode() ==# 'n')
-    exe 'hi! StatusLine guibg=Green4'
-  elseif (mode() =~? '[vV]')
-    exe 'hi! StatusLine guibg=Purple4'
+    exe normalColor
   elseif (mode() =~? '[iIaAoO]')
-    exe 'hi! StatusLine guibg=Blue3'
+    exe insertColor
   elseif (mode() ==# 'R')
-    exe 'hi! StatusLine guibg=Red4'
+    exe replaceColor
+  elseif (mode() =~? '[vV]')
+    exe visualColor
   else
-    exe 'hi! StatusLine guibg=Green4'
+    exe normalColor
   endif
   return ''
 endfunction
