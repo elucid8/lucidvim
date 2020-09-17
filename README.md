@@ -2,13 +2,11 @@
 
 ![Demo animation](https://github.com/elucid8/lucidvim/lucidvim.gif)
 
-![Donate](<script
-src="https://liberapay.com/elucid8/widgets/button.js"></script>
-<noscript><a href="https://liberapay.com/elucid8/donate"><img alt="Donate using
+![Donate](<noscript><a href="https://liberapay.com/elucid8/donate"><img alt="Donate using
 Liberapay"
 src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>)
 
-[//]:# ![Donate](<script src="<form
+[//]:# ![Donate](<form
 action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <table>
