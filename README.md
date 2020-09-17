@@ -1,8 +1,8 @@
 # LucidVim
 
-![Demo animation](https://github.com/elucid8/lucidvim/lucidvim.gif)
+![lucidvim demo](lucidvim.gif)
 
-[<img src="https://liberapay.com/elucid8/donate">](https://liberapay.com/assets/widgets/donate.svg)
+[<img src="https://liberapay.com/assets/widgets/donate.svg">](https://liberapay.com/elucid8/donate)
 
 [<img src="https://badgen.net/badge/donate/PayPal/green">](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=48LBBPC7APRJA&currency_code=USD&source=url)
 
