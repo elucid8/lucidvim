@@ -1,6 +1,6 @@
-"====================="
-" LucidVim v0.2-alpha "
-"====================="
+"=-=-=--=-=-="
+"  LucidVim  "
+"=-=-=--=-=-="
 
 "" Displays cursorline and cursorcolumn
 augroup CursorLine
