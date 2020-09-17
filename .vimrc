@@ -106,6 +106,7 @@ let g:currentmode={
   \ 'v'  : 'VISUAL',
   \ 'V'  : 'V-LINE',
   \ '' : 'V-BLOCK',
+  \ 'c'  : 'COMMAND',
   \}
 "Changes color of statusline based on the mode
 function! ChangeColor()
