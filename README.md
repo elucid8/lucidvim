@@ -1,6 +1,8 @@
 # LucidVim
 
 ![lucidvim demo](lucidvim.gif)
+
+
 [<img src="https://badgen.net/badge/donate/liberapay/green">](https://liberapay.com/elucid8/donate)
 [<img src="https://badgen.net/badge/donate/PayPal/green">](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=48LBBPC7APRJA&currency_code=USD&source=url)
 ![License](https://badgen.net/badge/%E2%9A%96/GPL3/blue)
