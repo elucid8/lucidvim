@@ -3,8 +3,8 @@
 ![lucidvim demo](lucidvim.gif)
 
 
-[<img src="https://badgen.net/badge/donate/liberapay/black">](https://liberapay.com/elucid8/donate)
-[<img src="https://badgen.net/badge/donate/PayPal/black">](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=48LBBPC7APRJA&currency_code=USD&source=url)
+[<img src="https://badgen.net/badge/donate/liberapay/purple">](https://liberapay.com/elucid8/donate)
+[<img src="https://badgen.net/badge/donate/PayPal/purple">](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=48LBBPC7APRJA&currency_code=USD&source=url)
 [<img src="https://badgen.net/badge/%E2%9A%96/GPL3/blue">](https://www.gnu.org/licenses/gpl-3.0.txt)
 
 LucidVim is an out-of-the-box vim distribution for programmers. It aims to
