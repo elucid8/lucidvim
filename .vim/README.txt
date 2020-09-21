@@ -32,7 +32,7 @@ or any other extension that others may desire to tack on to it.
 ## Installation
 Prerequisite - Have vim8 http://www.vim.org or higher installed.
 
-After installing vim, simply download this .vimrc to your home directory.
+After installing vim, simply download the .vim directory into your home directory.
 
 ## Help
 * Tutorials and Further Information - https://elucid8.github.io/lucidvim

@@ -2,12 +2,6 @@
 
 ![lucidvim demo](lucidvim.gif)
 
-
-[<img src="https://badgen.net/badge/donate/liberapay/purple">](https://liberapay.com/elucid8/donate)
-[<img src="https://badgen.net/badge/donate/PayPal/purple">](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=48LBBPC7APRJA&currency_code=USD&source=url)
-[<img src="https://badgen.net/badge/%E2%9A%96/GPL3/blue">](https://www.gnu.org/licenses/gpl-3.0.txt)
-![version](https://badgen.net/badge/version/beta.1)
-
 LucidVim is an out-of-the-box vim distribution for programmers. It aims to
 provide all the tools expected from a modern programmer's text editor without
 IDE-ifying it. The design philosophy for the project is function over form and
@@ -40,7 +34,7 @@ or any other extension that others may desire to tack on to it.
 ## Installation
 Prerequisite - Have [vim8](http://www.vim.org) or higher installed.
 
-After installing vim, simply download this .vimrc to your home directory.
+After installing vim, simply download the .vim directory into your home directory.
 
 ## Help
 * [Tutorials and Further Information](https://elucid8.github.io/lucidvim)
