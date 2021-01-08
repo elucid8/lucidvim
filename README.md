@@ -25,16 +25,17 @@ is heavily inspired by the
 or any other extension that others may desire to tack on to it.
 * It's not an IDE (see: nvim). Our philosophy is about avoiding feature creep
   and utilizing vim's strengths as a text editor.
-* It's not a Sandbox to mold your own text editor. So many solutions to making
-  vim more usable involve boatloads of plugins and very custom config files that
+* It's not a plugin circus. So many solutions to making
+  vim more usable involve boatloads of plugins and custom config files that
   stray far from vanilla behavior. We don't aim to reshape vim into some new
   editor, but to let the vim experience shine with our added useability
   features and settings.
 
 ## Installation
-Prerequisite - Have [vim8](http://www.vim.org) or higher installed.
+Prerequisite - Have [vim8](https://github.com/vim/vim) or higher installed. For best results,
+edit vim8's src/Makefile to your liking and compile.
 
-After installing vim, simply download the .vim directory into your home directory.
+After installing vim, simply copy the .vim directory into your home directory.
 
 ## Help
 * [Tutorials and Further Information](https://elucid8.github.io/lucidvim)
