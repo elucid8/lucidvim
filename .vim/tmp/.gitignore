@@ -1,0 +1,4 @@
+# This file exists to keep the tmp directory empty for version control
+# and to force git to track an "empty" folder.
+*
+!.gitignore
